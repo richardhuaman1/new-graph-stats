@@ -10,4 +10,4 @@ export const sizes = {
 
 export const SCORE_TEAM_MAX_LENGTH = 15
 export const REQUEST_TIMEOUT = 10000;
-export const INTERVAL_REFETCH= 5000
+export const INTERVAL_REFETCH= 60000

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import './PercentageTrapezoid.css'
+import './percentage-trapezoid.css'
 
 interface PercentageRegionsProps {
   values: [number, number, number]
@@ -20,7 +20,7 @@ interface PercentageRegionsProps {
   startY?: number
 }
 
-export default function PercentageRegions({
+export function PercentageRegions({
   values,
   counts,
   className = '',

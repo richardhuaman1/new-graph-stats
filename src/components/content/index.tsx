@@ -1,14 +1,14 @@
 'use client'
 
 import { useRef, useState, useEffect } from 'react'
-import { gsap } from 'gsap'
+import gsap from '@/libs/gsap'
 import {SoccerField} from "@/components/soccer-field";
 import {TV} from "@/components/tv";
 import {OtherMarkets} from "@/components/other-markets";
 import {SoccerHeader} from "@/components/soccer-header";
-import PercentageTrapezoid from "@/app/trapecio/components/PercentageTrapezoid";
 import {GraphStatsStore} from "@/stores/graph-stats.store";
 import {parsePercentages} from "@/utilities/helper";
+import {PercentageRegions} from "@/components/percentage-trapezoid/percentage-trapezoid";
 
 type GraphMainProps = {
     otherMarketsRef: React.RefObject<HTMLDivElement | null>
@@ -310,7 +310,7 @@ export function GraphMain({ otherMarketsRef }: GraphMainProps) {
                 <div className="relative inline-block h-[30rem] w-[72.5rem]" ref={canchaRef}>
                     <SoccerField />
                     <div className="absolute inset-0 -top-[8rem]" ref={trapecioRef}>
-                        <PercentageTrapezoid
+                        <PercentageRegions
                             values={score && score.selections ?
                                 parsePercentages(score.selections.map(s => s?.percentage), 3) as [number, number, number] :
                                 [33.33, 33.34, 33.33] // Valores por defecto si no hay datos

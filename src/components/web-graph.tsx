@@ -7,9 +7,9 @@ import {INTERVAL_REFETCH, sizes} from "@/config";
 import {GraphStatsStore} from "@/stores/graph-stats.store";
 import {useEffect, useRef, useState} from "react";
 import {GraphStats} from "@/types";
-import { gsap } from 'gsap';
 import {useQueryClient} from "@tanstack/react-query";
 import {graphStatsKeys} from "@/queries/graph-stats.query";
+import gsap from '@/libs/gsap'
 
 type WebGraphProps = {
     data: GraphStats[];
