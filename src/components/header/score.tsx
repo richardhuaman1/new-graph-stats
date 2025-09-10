@@ -7,20 +7,21 @@ export function Score() {
     return (
         <div className={'w-full flex items-center justify-center flex-col'}>
             <div
-                className={'relative bg-gradient-to-t from-[#070809] to-[#7F7E80] flex items-center justify-center w-[68rem] rounded-lg h-[5rem] overflow-hidden'}>
+                className={'relative bg-gradient-to-t from-[#070809] to-[#7F7E80] flex items-center justify-center w-[53rem] rounded-lg h-[5rem] overflow-hidden'}>
                 <div
                     className={'text-white text-4xl font-extrabold transform scale-y-120  w-5/12 flex items-center justify-center px-6'}>
                     {''}
                 </div>
                 <div
-                    className={'bg-gradient-to-t from-[#ECEBEC] to-[#CECCCE] text-6xl font-extrabold h-full flex items-center justify-center px-6 pt-2 rounded-sm w-2/12 mb-5 text-[#313237]'}>{markets.marketname}
+                    className={'bg-gradient-to-t from-[#ECEBEC] to-[#CECCCE] h-full flex items-center justify-center px-6 pt-2 rounded-sm w-2/12 mb-5'}>
+                    <p className={'text-6xl font-extrabold text-[#313237]'}>{markets.marketname}</p>
                 </div>
                 <div
                     className={'text-white text-4xl font-extrabold transform scale-y-120 r w-5/12 flex items-center justify-center px-6'}>
                     {''}
                 </div>
             </div>
-            <div className={'bg-gradient-to-r from-[#76080e] to-[#68050e] text-white py-1.5 text-2xl w-[58rem] text-center'}>RESULTADO DEL PARTIDO</div>
+            <div className={'bg-gradient-to-r from-[#76080e] to-[#68050e] text-white py-1.5 text-2xl w-[48rem] text-center'}>RESULTADO DEL PARTIDO</div>
             {/*Bet Stats */}
             <BetStats selections={selections}/>
         </div>
