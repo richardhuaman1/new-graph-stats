@@ -50,7 +50,6 @@ export default function IndexPage() {
 
     useSocketEvent("emit", (data) => {
 
-        console.log({data});
         const refreshed = data.flat();
 
         const updateSelections = (collection: GraphStat): GraphStat => {
@@ -59,7 +58,6 @@ export default function IndexPage() {
                 selections: collection.selections.map(sel => {
                     const match = refreshed.find(
                         r =>
-                            r.selectionname === sel.selectionname &&
                             r.markettype === collection.markets.markettype
                     );
 
