@@ -1,13 +1,12 @@
 import { useEffect, useCallback } from 'react';
 import { useSocket } from '@/context/socketContext';
-import { DataResponse } from '@/context/socketEmit.interface';
-import { ResponseDataInit } from '@/context/socket.interface';
+import {GraphStat, RefreshedSelection, SocketResponse} from "@/types";
 
 type EventType = 'init' | 'emit';
 
 type EventDtoMap = {
-    init: ResponseDataInit;
-    emit: DataResponse;
+    init: SocketResponse<GraphStat[]>;
+    emit: RefreshedSelection[][];
 };
 
 const useSocketEvent = <K extends EventType>(

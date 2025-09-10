@@ -19,10 +19,12 @@ export default function IndexPage() {
                  sendMessage("send-data");
              });
          }, [socket, sendMessage]);
+
          useSocketEvent("init", (dataSocket: ResponseDataInit) => {
              console.log({dataSocket});
              setDataInit(dataSocket)
          });
+
          useSocketEvent("emit", (dataSocket: DataResponse) => {
              console.log({dataSocket})
         });

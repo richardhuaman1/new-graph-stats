@@ -4,39 +4,20 @@ import {Header} from "@/components/header";
 import {Footer} from "@/components/footer";
 import {GraphMain} from "@/components/content";
 import {INTERVAL_REFETCH, sizes} from "@/config";
-import {GraphStatsStore} from "@/stores/graph-stats.store";
 import {useEffect, useRef, useState} from "react";
-import {GraphStat} from "@/types";
-import {useQueryClient} from "@tanstack/react-query";
-import {graphStatsKeys} from "@/queries/graph-stats.query";
 import gsap from '@/libs/gsap'
 
-type WebGraphProps = {
-    data: GraphStat[];
-    isLoading: boolean;
-}
 
-export function WebGraph({data: graphStats, isLoading}: WebGraphProps) {
-    const setScore = GraphStatsStore.useSetScore()
-    const setOtherMarkets = GraphStatsStore.useSetOtherMarkets()
+export function WebGraph() {
     const [isAnimating, setIsAnimating] = useState(false)
-    const queryClient = useQueryClient();
 
     // Referencias para las animaciones
     const webGraphHeaderRef = useRef<HTMLDivElement>(null)
     const otherMarketsRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
-        setScore(graphStats[0])
-        setOtherMarkets([graphStats[1], graphStats[2]])
-        queryClient.invalidateQueries({queryKey: graphStatsKeys.all})
-        
-        // Disparar evento para que GraphMain ejecute la animación de desaparecer
         // cuando se actualicen los datos de la API
         window.dispatchEvent(new CustomEvent('apiDataUpdated'))
-        
-        // El evento apiDataSettled ahora se dispara automáticamente
-        // cuando termina la animación de desaparecer en GraphMain
     }, [])
 
     useEffect(() => {

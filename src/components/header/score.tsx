@@ -2,7 +2,7 @@ import {BetStats} from "@/components/header/bet-stats";
 import {GraphStatsStore} from "@/stores/graph-stats.store";
 
 export function Score() {
-    const {market, selections} = GraphStatsStore.useGetScore();
+    const {markets, selections} = GraphStatsStore.useGetScore();
 
     return (
         <div className={'w-full flex items-center justify-center flex-col'}>
@@ -14,7 +14,7 @@ export function Score() {
                 </div>
                 <div
                     className={'bg-gradient-to-t from-[#ECEBEC] to-[#CECCCE] h-full flex items-center justify-center px-6 pt-2 rounded-sm w-2/12 mb-5'}>
-                    <p className={'text-6xl font-extrabold text-[#313237]'}>{market.marketname}</p>
+                    <p className={'text-6xl font-extrabold text-[#313237]'}>{markets.marketname}</p>
                 </div>
                 <div
                     className={'text-white text-4xl font-extrabold transform scale-y-120 r w-5/12 flex items-center justify-center px-6'}>

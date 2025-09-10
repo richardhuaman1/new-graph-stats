@@ -1,7 +1,8 @@
 import {GraphStat} from "@/types";
 
 export const GraphStatsEmptyState: GraphStat = {
-    market: {
+    position: 0,
+    markets: {
         marketEq: '-',
         marketname: '-',
         markettype: '-'
