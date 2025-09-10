@@ -46,7 +46,7 @@ export const OtherMarkets = forwardRef<HTMLDivElement>((props, ref) => {
                 <div className={'flex items-center justify-center gap-2 w-full flex-col'}>
                    <div className={'ml-6 flex items-center justify-center gap-2 w-full'}>
                        <TrapezoidBox variant={'dark-red'} className={'w-2/6 px-2 py-2 flex items-center justify-center h-full'}>
-                           <p className={'text-white text-xl font-bold text-center line-clamp-1'}>{market1.markets.marketEq}</p>
+                           <p className={'text-white text-xl font-bold text-center line-clamp-1'}>{market1.market.marketEq}</p>
                        </TrapezoidBox>
                        <TrapezoidBox  className={'w-4/6 px-2 py-2'}>
                            <div className="flex items-center justify-center w-full">
@@ -69,7 +69,7 @@ export const OtherMarkets = forwardRef<HTMLDivElement>((props, ref) => {
                    </div>
                     <div className={'flex items-center justify-center gap-2 w-full'}>
                        <TrapezoidBox variant={'dark-red'} className={'w-2/6 px-2 py-2 flex items-center justify-center h-full'}>
-                           <p className={'text-white text-xl font-bold text-center line-clamp-1'}>{market2.markets.marketEq}</p>
+                           <p className={'text-white text-xl font-bold text-center line-clamp-1'}>{market2.market.marketEq}</p>
                        </TrapezoidBox>
                        <TrapezoidBox  className={'w-4/6 px-2 py-2'}>
                            <div className="px-6 flex items-center justify-center w-full">

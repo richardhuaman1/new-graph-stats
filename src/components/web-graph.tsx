@@ -6,13 +6,13 @@ import {GraphMain} from "@/components/content";
 import {INTERVAL_REFETCH, sizes} from "@/config";
 import {GraphStatsStore} from "@/stores/graph-stats.store";
 import {useEffect, useRef, useState} from "react";
-import {GraphStats} from "@/types";
+import {GraphStat} from "@/types";
 import {useQueryClient} from "@tanstack/react-query";
 import {graphStatsKeys} from "@/queries/graph-stats.query";
 import gsap from '@/libs/gsap'
 
 type WebGraphProps = {
-    data: GraphStats[];
+    data: GraphStat[];
     isLoading: boolean;
 }
 

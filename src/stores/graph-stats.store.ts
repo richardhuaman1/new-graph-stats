@@ -1,15 +1,15 @@
 import {create} from 'zustand';
-import {GraphStats} from "@/types";
+import {GraphStat} from "@/types";
 import {GraphStatsEmptyState} from "@/constants";
 
 interface State {
-    score: GraphStats;
-    otherMarkets: GraphStats[];
+    score: GraphStat;
+    otherMarkets: GraphStat[];
 }
 
 interface Actions {
-    setScore: (stats: GraphStats) => void;
-    setOtherMarkets: (stats: GraphStats[]) => void;
+    setScore: (stats: GraphStat) => void;
+    setOtherMarkets: (stats: GraphStat[]) => void;
 }
 
 const initialState: State = {

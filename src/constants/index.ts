@@ -1,7 +1,7 @@
-import {GraphStats} from "@/types";
+import {GraphStat} from "@/types";
 
-export const GraphStatsEmptyState: GraphStats = {
-    markets: {
+export const GraphStatsEmptyState: GraphStat = {
+    market: {
         marketEq: '-',
         marketname: '-',
         markettype: '-'

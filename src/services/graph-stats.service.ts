@@ -1,10 +1,10 @@
 import {apiClient} from "@/libs/api-client";
-import {ApiResponse, GraphStats} from "@/types";
+import {ApiResponse, GraphStat} from "@/types";
 
 export class GraphStatsService {
     async getGraphStats() {
         try {
-            const response = await apiClient.get<ApiResponse<GraphStats[]>>('/v1/markets');
+            const response = await apiClient.get<ApiResponse<GraphStat[]>>('/v1/markets');
             const {data} = response.data;
             return data
         } catch (err: any) {

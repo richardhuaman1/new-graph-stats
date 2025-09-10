@@ -4,7 +4,7 @@ export type ApiResponse<T> = {
     data: T;
 }
 
-export type Markets = {
+export type Market = {
     markettype: string;
     marketname: string;
     marketEq: string;
@@ -20,7 +20,12 @@ export type Selection = {
     background: string;
 }
 
-export type GraphStats = {
-    markets: Markets;
+export type GraphStat = {
+    market: Market;
     selections: Selection[];
+}
+
+export type SocketResponse = {
+    message: string;
+    data: GraphStat[];
 }
