@@ -1,0 +1,7 @@
+include:
+    - project: 'devops/continuous-automation'
+      ref: 'main'
+      file: 'devops/estadisticas/pipeline-ci-front.yaml'
+variables:
+    IMAGE_NAME: web-stats-graphs
+    IMAGE_VERSION: 1.1.15
