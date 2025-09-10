@@ -32,7 +32,9 @@ export type GraphStat = {
     selections: Selection[];
 }
 
-export type RefreshedSelection = Pick<Selection, 'selectionname' | 'count' | 'quota' | 'percentage'> & Pick<Market, 'markettype'>
+export type RefreshedSelection = Pick<Selection, 'selectionname' | 'count' | 'quota' | 'percentage'> & {
+    markettype: number;
+}
 
 export type SocketResponse<T> = {
     message: string;

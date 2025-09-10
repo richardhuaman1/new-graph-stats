@@ -58,7 +58,8 @@ export default function IndexPage() {
                 selections: collection.selections.map(sel => {
                     const match = refreshed.find(
                         r =>
-                            r.markettype === collection.markets.markettype
+                            r.selectionname === sel.selectionname &&
+                            String(r.markettype) === collection.markets.markettype
                     );
 
                     return match
